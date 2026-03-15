@@ -1,3 +1,4 @@
+import AnimatedButton from "@/app/components/ui/animated-button";
 import Image, { StaticImageData } from "next/image";
 
 type Tab = {
@@ -28,14 +29,17 @@ export default function VisionPage({
         <Image
           src={foxtradeicons}
           alt="FoxTrades Logo"
-          width={60}
+          width={100}
           height={60}
+          style={{
+            filter: "invert(55%) sepia(95%) saturate(500%) hue-rotate(350deg)",
+          }}
         />
         <h1 className="ml-2 text-white">Fox Trade</h1>
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-6 mr-12">
+      <div className="flex gap-6 mr-12 ">
         {tabscoin?.map((item, index) => (
           <div
             key={item.id}
@@ -63,10 +67,9 @@ export default function VisionPage({
         ))}
       </div>
       <div>
-        <button className="border border-white rounded-4xl px-2 py-2">
-          Contact
-        </button>
+        <AnimatedButton text="Contact" />
       </div>
+      
     </>
   );
 }

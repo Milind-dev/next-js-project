@@ -47,13 +47,13 @@ export default function CompanyMarqueeLogo() {
 
       <div className="relative overflow-hidden">
         {/* LEFT FADE */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-[#004040] to-transparent z-10" />
 
         {/* RIGHT FADE */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-[#004040] to-transparent z-10" />
 
         {/* MARQUEE */}
-        <div className="flex ml-92 w-max gap-16 animate-marquee hover:[animation-play-state:paused]">
+        <div className="flex ml-92 w-max gap-16 animate-marquee hover:[animation-play-state:infinite]">
           {duplicated.map((logo, index) => (
             <Image
               key={index}
@@ -61,7 +61,7 @@ export default function CompanyMarqueeLogo() {
               alt={logo.alt}
               width={30}
               height={30}
-              className="opacity-70 hover:opacity-100 transition"
+              className="opacity-100 hover:opacity-900 transition"
             />
           ))}
         </div>
