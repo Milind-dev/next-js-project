@@ -7,15 +7,42 @@ import CompanyMarqueeLogo from "../components/companylogos/Company-logos-marquee
 import { CompanyDetails } from "../CompanyDetails/Company-details-Page";
 import Image from "next/image";
 import Tradeimgicon from "../../public/logos/TradeIcon_dashboard.svg";
+import Resources from "../dashboard/Resources/Page";
+import Footer from "../Footer/page";
+import YoutubeVideo from "../components/ui/YoutubeVideo";
 
 export default function Dashboard() {
+  const [copied, setCopied] = useState(false);
+
   const [isopen, setIsopen] = useState<number | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const tabscoin = [
-    { id: 1, name: "Platform", content: ["India", "Australia", "New York"] },
-    { id: 2, name: "Market", content: ["Crypto", "Stocks", "Forex"] },
-    { id: 3, name: "About", content: ["Company", "Team", "Contact"] },
+    {
+      id: 1,
+      name: "Platform",
+      content: [
+        "AI Trading Bot",
+        "Trading Dashboard",
+        "Portfolio Management",
+        "Risk Management",
+      ],
+    },
+    {
+      id: 2,
+      name: "Market",
+      content: [
+        "Cryptocurrency",
+        "Forex Trading",
+        "Stock Market",
+        "Commodities",
+      ],
+    },
+    {
+      id: 3,
+      name: "About",
+      content: ["Documentation", "API Access", "Contact Support", "Community"],
+    },
   ];
 
   const handleEnter = (index: number) => {
@@ -27,6 +54,13 @@ export default function Dashboard() {
     timeoutRef.current = setTimeout(() => {
       setIsopen(null);
     }, 150);
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("https://foxtrade.netlify.app/");
+    setCopied(true);
+
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -43,12 +77,15 @@ export default function Dashboard() {
 
       <div className="mt-10  flex flex-col items-center text-center  w-full">
         <h4 className="text-xl font-bold text-[yellow]">
-          <span className="text-[#05d939] text-4xl">GenAi Risks</span>
+          <span className="text-[#05d939] text-6xl py-3  px-1">
+            Ai Trading Risks
+          </span>
         </h4>
-        <p className="text-2xl "> Trading Views</p>
+        <p className="text-4xl font-bold"> Vulnerblity AI Handle</p>
         <h5 className="text-[#c7ffff] w-[70%] py-4 ">
-          Find vulnerabilities in AI agents before users do. Delegate the mental
-          burden of detecting AI failures to security experts.
+          I Trading (AITrade) Risks are the potential dangers when using AI or
+          automated algorithms to trade stocks, crypto, or forex. Even though AI
+          can analyze large amounts of data quickly.
         </h5>
 
         <button className="w-20% h-20% border border-yellow-100 py-3 px-3 rounded cursor-cell mt-4">
@@ -60,15 +97,40 @@ export default function Dashboard() {
       </div>
       <CompanyMarqueeLogo />
       <div>
-        <Image
-          src={Tradeimgicon}
-          alt="Trade Img Icon"
-          width={1000}
-          height={860}
-          className="ml-[200px]"
-        />
+        <div className="flex items-center gap-3 bg-black/60 border border-gray-700 px-4 py-2 rounded-lg">
+          <Image
+            src={Tradeimgicon}
+            alt="Trade Img Icon"
+            width={1000}
+            height={860}
+            className="ml-[200px]"
+          />
+          <span className="text-gray-300 text-sm mr-10">
+            https://foxtrade.netlify.app/
+          </span>
+
+          <button
+            // onClick={() =>
+            //   navigator.clipboard.writeText("https://foxtrade.netlify.app/")
+            // }
+            onClick={handleCopy}
+            className="relative px-3 py-1 bg-[#40dedf] text-black rounded hover:bg-[#2ac6c7] hover:shadow-2xl "
+          >
+            copy
+            {copied && (
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded">
+                Copied!
+              </span>
+            )}
+          </button>
+        </div>
       </div>
       <CompanyDetails />
+      <Resources />
+      <div className="max-w-4xl mx-auto py-10">
+        <YoutubeVideo videoId="u57EnkQaUTY" />
+      </div>
+      <Footer />
     </div>
   );
 }
