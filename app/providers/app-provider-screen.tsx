@@ -11,7 +11,7 @@ type Props = {
 export default function AppLoaderProvider({ children }: Props) {
   const [loading, setIsLoading] = useState(true);
   const foxtrade = "Fox Trader";
-  const delay = 100;
+  const delay = 10000;
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
