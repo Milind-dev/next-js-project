@@ -29,11 +29,13 @@ export default function LoadingScreen() {
         background: "linear-gradient(135deg, #010001, #021a1a, #000000)",
       }}
     >
-      <div>
+      <div className="w-[40%]">
         <p className="typewriter">
-          Where the world charts, chats, and trades markets. We are a
-          supercharged super-charting platform and social network for traders
-          and investors.
+          FoxTrade provides clear and simple charts that help traders quickly
+          understand market trends without complexity. Our platform uses AI to
+          support smarter decisions while identifying potential risks. FoxTrade
+          also analyzes AI vulnerabilities and LLM-driven risks to improve
+          safety, helping users trade with better awareness and confidence.
         </p>
       </div>
       <div

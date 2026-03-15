@@ -7,7 +7,7 @@ export default function page() {
         {/* Logo + Description */}
         <div>
           <h2 className="text-2xl font-bold text-green-400 flex items-center gap-2">
-            🦎 Ai Trade
+            🦎 AI RISK Solution
           </h2>
 
           <p className="mt-4 text-sm leading-relaxed">

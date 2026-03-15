@@ -1,18 +1,22 @@
 export const attackTypes = [
   {
     title: "Sycophancy Attacks",
-    description: "Bot endorses a false claim to please the user",
+    description:
+      "AI agrees with incorrect user claims to appear helpful, leading to misleading or biased responses.",
   },
   {
     title: "Prompt Injection",
-    description: "Bot endorses a false claim to please the user",
+    description:
+      "Malicious prompts manipulate the AI system to override instructions and reveal restricted information.",
   },
   {
     title: "Data Disclosure",
-    description: "Bot endorses a false claim to please the user",
+    description:
+      "Sensitive or confidential information is unintentionally exposed through AI responses.",
   },
   {
     title: "Inappropriate Content",
-    description: "Bot endorses a false claim to please the user",
+    description:
+      "AI generates harmful, offensive, or policy-violating content that should normally be restricted.",
   },
 ];

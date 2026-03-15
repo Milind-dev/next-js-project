@@ -53,15 +53,16 @@ export default function CompanyMarqueeLogo() {
         <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-[#004040] to-transparent z-10" />
 
         {/* MARQUEE */}
-        <div className="flex ml-92 w-max gap-16 animate-marquee hover:[animation-play-state:infinite]">
+        <div className="flex ml-92 w-max gap-16 animate-marquee hover:[animation-play-state:infinite] ">
           {duplicated.map((logo, index) => (
             <Image
               key={index}
               src={logo.src}
               alt={logo.alt}
-              width={30}
-              height={30}
-              className="opacity-100 hover:opacity-900 transition"
+              width={50}
+              height={50}
+              // className="opacity-100 hover:opacity-900 transition "
+              className="border border-1 opacity-100 hover:opacity-900 transition h-8 brightness-70 invert "
             />
           ))}
         </div>

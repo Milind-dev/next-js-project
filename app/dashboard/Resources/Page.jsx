@@ -9,21 +9,21 @@ const resources = [
     image: Candles,
     title: "What is Shadow AI and how to prevent this threat in AI Security",
     description:
-      "Shadow AI happens when employees bypass IT to use unapproved generative AI tools, creating severe data leakage and compliance vulnerabilities.",
+      "Shadow risk means hidden risks that are not easy to see at first. In trading or finance, these risks come from unclear data, complex systems, or activities that are not properly monitored. If people ignore shadow risk, it can suddenly cause financial losses, problems with rules, and instability in the market.",
   },
   {
     id: 2,
     image: Candles,
     title: "What is Shadow AI and how to prevent this threat in AI Security",
     description:
-      "Shadow AI happens when employees bypass IT to use unapproved generative AI tools, creating severe data leakage and compliance vulnerabilities.",
+      "Shadow risk means hidden risks that are not easy to see at first. In trading or finance, these risks come from unclear data, complex systems, or activities that are not properly monitored. If people ignore shadow risk, it can suddenly cause financial losses, problems with rules, and instability in the market.",
   },
   {
     id: 3,
     image: Candles,
     title: "What is Shadow AI and how to prevent this threat in AI Security",
     description:
-      "Shadow AI happens when employees bypass IT to use unapproved generative AI tools, creating severe data leakage and compliance vulnerabilities.",
+      "Shadow risk means hidden risks that are not easy to see at first. In trading or finance, these risks come from unclear data, complex systems, or activities that are not properly monitored. If people ignore shadow risk, it can suddenly cause financial losses, problems with rules, and instability in the market.",
   },
 ];
 
