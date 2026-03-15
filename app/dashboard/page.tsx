@@ -10,6 +10,7 @@ import Tradeimgicon from "../../public/logos/TradeIcon_dashboard.svg";
 import Resources from "../dashboard/Resources/Page";
 import Footer from "../Footer/page";
 import YoutubeVideo from "../components/ui/YoutubeVideo";
+import ScrambleText from "../components/ui/ScrambleText";
 
 export default function Dashboard() {
   const [copied, setCopied] = useState(false);
@@ -78,7 +79,11 @@ export default function Dashboard() {
       <div className="mt-10  flex flex-col items-center text-center  w-full">
         <h4 className="text-xl font-bold text-[yellow]">
           <span className="text-[#05d939] text-6xl py-3  px-1">
-            Ai Trading Risks
+            {/* Ai Trading Risks */}
+            <ScrambleText
+              text="Ai Trading Risks"
+              // className="py-4 text-center text-md font-bold text-[#c7e6e4] tracking-wide"
+            />
           </span>
         </h4>
         <p className="text-4xl font-bold"> Vulnerblity AI Handle</p>
@@ -91,9 +96,13 @@ export default function Dashboard() {
         <button className="w-20% h-20% border border-yellow-100 py-3 px-3 rounded cursor-cell mt-4">
           Learn More{" "}
         </button>
-        <p className="py-4 text-center text-sm font-bold text-[#c7e6e4] tracking-wide ">
+        {/*   <p className="py-4 text-center text-sm font-bold text-[#c7e6e4] tracking-wide ">
           Trusted by people AI Leader
-        </p>
+        </p> */}
+        <ScrambleText
+          text="Trusted by people AI Leader"
+          className="py-4 text-center text-md font-bold text-[#c7e6e4] tracking-wide"
+        />
       </div>
       <CompanyMarqueeLogo />
       <div>
