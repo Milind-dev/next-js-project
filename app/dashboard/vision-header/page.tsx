@@ -16,7 +16,7 @@ type Props = {
 };
 
 export default function VisionPage({
-  tabscoin,
+  tabscoin = [],
   foxtradeicons,
   handleEnter,
   handleLeave,
@@ -36,7 +36,7 @@ export default function VisionPage({
 
       {/* Tabs */}
       <div className="flex gap-6 mr-12">
-        {tabscoin.map((item, index) => (
+        {tabscoin?.map((item, index) => (
           <div
             key={item.id}
             className="relative"
@@ -49,7 +49,7 @@ export default function VisionPage({
 
             {isopen === index && (
               <div className="absolute left-0 top-full bg-black text-white shadow-xl rounded p-3 w-40">
-                {item.content.map((coin, i) => (
+                {item.content?.map((coin, i) => (
                   <p
                     key={i}
                     className="py-1 px-2 hover:bg-[#064f4f] rounded cursor-pointer"
